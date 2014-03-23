@@ -1,6 +1,48 @@
 {% extends 'WebsiteBundle:Layout:base.html.twig' %}
 
 {% block body %}
-    <h2>Hello there!</h2>
+<!-- LANDING SECTION -->
+<div class="constrained">
+    <div class="top--nav row">
+        <div class="col-md-3">
+            <span class="header">Dine In or Take Away</span>
+            Online Ordering Soon
+        </div>
+
+        <div class="col-md-6 text-center">
+            <span class="header">Phone 1300 11 MELT - 171 Chapel St. Windsor</span>
+            Open Everyday From Midday
+        </div>
+
+        <div class="col-md-3">
+            <span class="header">Contact</span>
+        </div>
+    </div>
+
+    <!-- MAIN NAV -->
+    <div class="row" id="body-nav--container">
+        <div class="col-md-4 col-sm-12 text-right body-nav--item">
+            <img src="{{ asset('/bundles/website/images/body_nav__menu.png') }}" width="125px" height="42px" />
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <img src="{{ asset('/bundles/website/images/body_logo.png') }}" width="330px" height="312px" />
+        </div>
+
+        <div class="col-md-4 col-sm-12 body-nav--item">
+            <img src="{{ asset('/bundles/website/images/body_nav__order.png') }}" width="125px" height="42px" />
+        </div>
+
+        <div class="col-md-12 col-sm-12 text-center body-nav--bottom">
+            <img src="{{ asset('/bundles/website/images/body_nav__about.png') }}" width="125px" height="42px" />
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- MENU SECTION -->
+
 {% endblock body %}
 

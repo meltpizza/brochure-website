@@ -1,4 +1,70 @@
+*, body, p, section, div,
+h1, h2, h3, h4, h5, h6, span,
+input, section, b, strong
+{
+    font-family: 'Lekton', sans-serif;
+    font-size: 16px;
+}
+
 body {
     background-color: rgb(248,245,231);
     color: rgb(239,87,39);
+}
+
+#layout--header {
+    display: none;
+}
+    #layout--header a.navbar-brand {
+        color: #fff;
+    }
+    #layout--header .navbar-inverse {
+        background-color: rgb(239,87,39);
+    }
+    #layout--header .navbar-inverse.navbar-fixed-top {
+        border-color: rgb(239,87,39);
+    }
+    #layout--header .navbar-inverse .navbar-nav>li>a,
+    #layout--header .navbar-inverse .navbar-nav>li>a:hover,
+    #layout--header .navbar-inverse .navbar-nav>li>a:link,
+    #layout--header .navbar-inverse .navbar-nav>li>a:visited
+    {
+        color: #fff;
+        text-decoration: none;
+    }
+
+#layout--body {
+}
+    #layout--body .top--nav {
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+    #layout--body .top--nav .header {
+        font-weight: bold;
+        display: block;
+    }
+    #layout--body #body-nav--container {
+        margin-top: 2.5em;
+    }
+    #layout--body .body-nav--item
+    {
+        padding-top: 130px;
+    }
+    #layout--body .body-nav--bottom
+    {
+        padding-top: 20px;
+    }
+
+#layout--footer {
+}
+
+/** Utilities **/
+
+.constrained {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.debug,
+.debug div {
+    border: 1px solid #990000;
 }
