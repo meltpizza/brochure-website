@@ -8,6 +8,14 @@
 
     <!-- Bootstrap -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    {% stylesheets
+        filter='cssrewrite' '@WebsiteBundle/Resources/public/css/main.css'
+        output='bundles/website/output/main.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
     {% block styles %}{% endblock styles %}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
