@@ -36,13 +36,28 @@
         <div class="col-md-12 col-sm-12 text-center body-nav--bottom">
             <img src="{{ asset('/bundles/website/images/body_nav__about.png') }}" width="125px" height="42px" />
         </div>
-
     </div>
+
+    <p class="melt-excerpt push--top">When pizza was invented in Naples, Italy over 200 years ago it was a fast 
+    and nutritious meal. At Melt it still is.</p>
 </div>
 
 
 
 <!-- MENU SECTION -->
+<div class="melt-reversed push--top" id="instafeed"></div>
 
 {% endblock body %}
 
+
+{% block javascript %}
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'pizza',
+        limit: 5,
+        clientId: '305682da7f0b46b3a868fe8a7680cba0'
+    });
+    feed.run();
+</script>
+{% endblock javascript %}
