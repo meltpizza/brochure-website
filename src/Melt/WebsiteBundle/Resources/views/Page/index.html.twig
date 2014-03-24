@@ -55,27 +55,83 @@
     </div>
 </div>
 
-<div class="push--top" id="border-image-slide">
+<!-- ABOUT SECTION -->
+<div class="melt-marbled" id="section--about">
+    <div class="contrained soft--top">
+        <div class="row">
+            <div class="col-md-12 text-center about--header">
+                <h2 class="body-header header--about">About</h2>
+                <p class="melt-excerpt">Click an icon to find out more</p>
+            </div>
+
+            <div class="col-md-4 about--icons">
+                <img src="{{ asset('/bundles/website/images/about_icons_napoli.png') }}"  width="180px" height="180px" />
+            </div>
+
+            <div class="col-md-4 about--icons">
+                <img src="{{ asset('/bundles/website/images/about_icons_fresh.png') }}"  width="180px" height="180px" />
+            </div>
+
+            <div class="col-md-4 about--icons">
+                <img src="{{ asset('/bundles/website/images/about_icons_dough.png') }}"  width="180px" height="180px" />
+            </div>
+
+            <div class="col-md-4 about--icons">
+                <img src="{{ asset('/bundles/website/images/about_icons_custom.png') }}"  width="180px" height="180px" />
+            </div>
+
+            <div class="col-md-4 about--icons">
+                <img src="{{ asset('/bundles/website/images/about_icons_400.png') }}"  width="180px" height="180px" />
+            </div>
+
+            <div class="col-md-4 about--icons">
+                <img src="{{ asset('/bundles/website/images/about_icons_fast.png') }}"  width="180px" height="180px" />
+            </div>
+
+        </div>
+    </div>
 </div>
 
-<!-- -->
+<!-- BORDER IMAGE SECTION -->
+<div class="border-image-slide" id="border-image--about">
+    <div class="slides-container">
+        <img src="{{ asset('/bundles/website/images/border_img_slide_02.jpg') }}" />
+        <img src="{{ asset('/bundles/website/images/border_img_slide_01.jpg') }}" />
+    </div>
+</div>
+
+<!-- MENU SECTION -->
 {% endblock body %}
 
 
 {% block javascript %}
 <script type="text/javascript">
-    var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'pizza',
-        limit: 5,
-        clientId: '305682da7f0b46b3a868fe8a7680cba0'
-    });
-    feed.run();
+var feed = new Instafeed({
+    get: 'tagged',
+    tagName: 'pizza',
+    limit: 5,
+    clientId: '305682da7f0b46b3a868fe8a7680cba0'
+});
+feed.run();
 
 $(function() {
     $('.border-image-slide').superslides({
-        animation: 'slide',
-        inherit_height_from: '.border-image-slide',
+        play                : 10000,
+        animation           : 'fade',
+        animation_speed     : 'slow',
+        inherit_height_from : '.border-image-slide',
+    });
+
+    $(window).scroll(function(){
+        if($(document).scrollTop() > 200)
+        {
+            $('#layout--header').fadeIn();
+        }
+
+        if($(document).scrollTop() < 100)
+        {
+            $('#layout--header').fadeOut();
+        }
     });
 });
 </script>
