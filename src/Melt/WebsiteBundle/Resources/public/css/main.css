@@ -69,13 +69,16 @@ body {
     }
     #layout--body #instafeed {
         text-align: center;
-        padding: 10px 0px 0px 10px;
-        height: 170px;
+        padding: 20px 0px 10px 10px;
+        height: 190px;
         text-overflow: hidden;
     }
         #layout--body #instafeed a {
-            margin-right: 10px;
+            margin-right: 12px;
         }
+    #layout--body .border-image-slide {
+        height: 550px;
+    }
 
 #layout--footer {
 }

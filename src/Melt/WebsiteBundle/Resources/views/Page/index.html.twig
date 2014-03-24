@@ -47,6 +47,18 @@
 <!-- MENU SECTION -->
 <div class="melt-reversed push--top" id="instafeed"></div>
 
+<!-- BORDER IMAGE SECTION -->
+<div class="border-image-slide" id="border-image--about">
+    <div class="slides-container">
+        <img src="{{ asset('/bundles/website/images/border_img_slide_01.jpg') }}" />
+        <img src="{{ asset('/bundles/website/images/border_img_slide_02.jpg') }}" />
+    </div>
+</div>
+
+<div class="push--top" id="border-image-slide">
+</div>
+
+<!-- -->
 {% endblock body %}
 
 
@@ -59,5 +71,12 @@
         clientId: '305682da7f0b46b3a868fe8a7680cba0'
     });
     feed.run();
+
+$(function() {
+    $('.border-image-slide').superslides({
+        animation: 'slide',
+        inherit_height_from: '.border-image-slide',
+    });
+});
 </script>
 {% endblock javascript %}
