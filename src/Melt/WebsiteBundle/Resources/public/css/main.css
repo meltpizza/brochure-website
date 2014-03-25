@@ -109,6 +109,21 @@ body {
         #layout--body .about--icons img {
             cursor: pointer;
         }
+    #layout--body #section--menu {
+    }
+        #layout--body #section--menu .menu-type-img {
+            margin-bottom: 4em;
+        }
+        #layout--body #section--menu .menu-item {
+            margin-bottom: 1.5em;
+        }
+        #layout--body #section--menu h4.menu-item--title {
+            margin-bottom: 0.25em;
+            font-size: 20px;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+
 
 #layout--footer {
 }
