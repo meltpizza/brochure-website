@@ -87,17 +87,21 @@ body {
         display: inline-block;
 
         width: 130px;
-        height: 65px;
-        margin: 0 auto;
+        height: 35px;
+        margin: 0 auto 1em;
         text-indent: -30000px;
 
         background-image: url(/bundles/website/images/body_headers.png);
         background-repeat: no-repeat;
-        background-size: 125px 130px;
+        background-size: 162px 130px;
         background-position: 0 0;
     }
         #layout--body h2.body-header.header--about {
         }
+        #layout--body h2.body-header.header--menu {
+            background-position: 0 -30px;
+        }
+
     #layout--body .about--icons {
         height: 300px;
         text-align: center;
