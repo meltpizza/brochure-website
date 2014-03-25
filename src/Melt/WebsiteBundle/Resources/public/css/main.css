@@ -123,6 +123,17 @@ body {
             font-weight: bolder;
             text-transform: uppercase;
         }
+        #layout--body #section--menu #menu-type--or {
+            margin-top: 8em;
+            margin-bottom: 8em;
+        }
+        #layout--body #section--menu #menu-type--footer p {
+            display: inline-block;
+            text-align: center;
+            width: 60%;
+            margin-right: auto;
+            margin-left: auto;
+        }
 
 
 #layout--footer {

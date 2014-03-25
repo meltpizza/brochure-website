@@ -160,11 +160,12 @@
             </div>
 
             <div class="col-md-2 text-center push--top">
-                &nbsp;
+                <img id="menu-type--or" src="{{ asset('/bundles/website/images/menu_type_or.png') }}"  width="160px" height="50px" />
+                <img src="{{ asset('/bundles/website/images/menu_type_vertical_divider.png') }}"  width="15px" height="800px" />
             </div>
 
             <!-- right -->
-            <div class="col-md-5 text-center push--top">
+            <div class="col-md-5 text-center push--top push--bottom">
                 <p class="menu-type-img"><img src="{{ asset('/bundles/website/images/menu_pizza_type_custom.png') }}"  width="307px" height="247px" /></p>
 
                 <div class="menu-item">
@@ -255,8 +256,18 @@
             </div><!-- RIGHT -->
 
             <!-- MENU FOOTER -->
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center menu-type--crust push--top">
                 <h4 class="menu-item--title">PREMIUM GLUTEN-FREE CRUST AVAILIBLE</h4>
+                <span class="menu-item--crust-price">(+ $4)</span>
+            </div>
+
+            <div class="push--top col-md-12 text-center" id="menu-type--footer">
+                <p>*Melt does not recommend this pizza for customers with gluten allergies,
+                due to the risk of cross contamination from our products containing flour</p>
+            </div>
+
+            <div class="col-md-12 text-center push--ends">
+                <img src="{{ asset('/bundles/website/images/menu_11_inch_bottom.png') }}"  width="645px" height="42px" />
             </div>
 
         </div><!-- ROW -->
