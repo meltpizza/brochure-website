@@ -93,13 +93,65 @@ body {
 
         background-image: url(/bundles/website/images/body_headers.png);
         background-repeat: no-repeat;
-        background-size: 162px 130px;
+        background-size: 180px 281px;
         background-position: 0 0;
     }
         #layout--body h2.body-header.header--about {
         }
         #layout--body h2.body-header.header--menu {
             background-position: 0 -30px;
+        }
+        #layout--body h2.body-header.header--salads {
+            background-position: 0 -92px;
+            width: 135px;
+        }
+        #layout--body h2.body-header.header--panuzzos {
+            width: 180px;
+            height: 40px;
+            background-position: 0 -220px;
+        }
+        #layout--body h2.body-header.header--sides {
+            width: 100px;
+            background-position: 0 -120px;
+        }
+        #layout--body h2.body-header.header--sweets {
+            background-position: 0 -155px;
+        }
+        #layout--body h2.body-header.header--drinks {
+            background-position: 0 -185px;
+        }
+        #layout--body h2.body-header.header--contact {
+            width: 158px;
+            margin-bottom: 80px;
+            background-position: 0 -60px;
+        }
+
+    #layout--body h2.drinks-header {
+        display: inline-block;
+
+        width: 280px;
+        height: 53px;
+        margin: 0 auto 1em;
+        text-indent: -30000px;
+
+        background-image: url(/bundles/website/images/drinks_headers.png);
+        background-repeat: no-repeat;
+        background-size: 280px 208px;
+        background-position: 0 0;
+    }
+        #layout--body h2.drinks-header.header--cocktails {
+            background-position: 0 3px;
+        }
+        #layout--body h2.drinks-header.header--vino {
+            background-position: 0 -52px;
+        }
+        #layout--body h2.drinks-header.header--cocktail-jugs {
+            margin-top: 2em;
+            background-position: 0 -104px;
+        }
+        #layout--body h2.drinks-header.header--beer {
+            margin-top: 2em;
+            background-position: 0 -160px;
         }
 
     #layout--body .about--icons {
@@ -135,6 +187,9 @@ body {
             margin-left: auto;
         }
 
+    #layout--body #section--menu #menu--bottom-divider {
+        margin-bottom: 8em;
+    }
 
 #layout--footer {
 }
