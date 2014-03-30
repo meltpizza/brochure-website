@@ -2,7 +2,7 @@
 
 {% block body %}
 <!-- LANDING SECTION -->
-<div class="constrained">
+<div class="constrained" id="section--top">
     <div class="top--nav row">
         <div class="col-md-3">
             <span class="header">Dine In or Take Away</span>
@@ -493,6 +493,12 @@
 
 {% block javascript %}
 <script type="text/javascript">
+AA_CONFIG = {
+  animationLength:  750,
+  easingFunction:   'linear',
+  scrollOffset:     50
+};
+
 var feed = new Instafeed({
     //tagName: 'meltpizza',
     get: 'user',
