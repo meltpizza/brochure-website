@@ -449,8 +449,39 @@
             </div>
 
             <div class="col-md-12 text-center">
-                <p>Call<p>
-                <p>1300 11 MELT</p>
+                <p>Call
+                <br />1300 11 MELT</p>
+                <p>EMAIL
+                <br />HI@MELT.COM.AU</p>
+
+                <p>171 CHAPEL STREET WINDSOR 3141
+                <br />VIEW MAP</p>
+
+                <img src="{{ asset('/bundles/website/images/contact_smiley_mail.png') }}"  class="push--bottom" width="180px" height="105px" />
+                <br />
+                <img src="{{ asset('/bundles/website/images/contact_signup_header.png') }}"  class="push--bottom" width="355px" height="60px" />
+
+                <form action="/" method="POST">
+                    <input size="30" name="name"  type="text" class="signup--input" placeholder="NAME"  />
+                    <input size="30" name="email" type="text" class="signup--input" placeholder="EMAIL"  />
+                </form>
+            </div>
+
+            <div class="col-md-12 text-center" id="contact--socials">
+                <ul>
+                    <li><a href="http://instagram.com/meltpizza/"><img src="{{ asset('/bundles/website/images/contact_social_instagram.png') }}" width="64px" height="64px" /></a></li>
+                    <li><a href="#"><img src="{{ asset('/bundles/website/images/contact_social_melt.png') }}" width="64px" height="64px" /></a></li>
+                    <li><a href="https://www.facebook.com/MeltPizza"><img src="{{ asset('/bundles/website/images/contact_social_fb.png') }}" width="64px" height="64px" /></a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-12 text-center" id="contact--footer">
+                <ul class="nav nav-pills">
+                    <li><a href="#">&copy; 2014 COPYRIGHT MELT</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">MAKE LOVE NOT WAR</a></li>
+                    <li><a href="#">DESIGN BY CIP</a></li>
+                </ul>
             </div>
 
         </div><!-- ROW -->
@@ -463,10 +494,11 @@
 {% block javascript %}
 <script type="text/javascript">
 var feed = new Instafeed({
-    get: 'tagged',
-    tagName: 'pizza',
+    //tagName: 'meltpizza',
+    get: 'user',
+    userId: 461693317,
     limit: 5,
-    clientId: '305682da7f0b46b3a868fe8a7680cba0'
+    accessToken: '461693317.467ede5.0119c860c0814e4dbca28c09961e0260'
 });
 feed.run();
 

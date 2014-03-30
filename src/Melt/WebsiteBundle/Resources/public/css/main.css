@@ -8,10 +8,15 @@
 
 *, body, p, section, div,
 h1, h2, h3, h4, h5, h6, span,
-input, section, b, strong
+input, section, b, strong,
+a, a:link, a:visited, a:hover
 {
     font-family: 'Lekton', sans-serif;
     font-size: 16px;
+}
+
+a, a:link, a:visited, a:hover {
+    color: rgb(239,87,39);
 }
 
 body {
@@ -190,6 +195,48 @@ body {
     #layout--body #section--menu #menu--bottom-divider {
         margin-bottom: 8em;
     }
+
+    #layout--body #section--contact {
+    }
+        #layout--body #section--contact p {
+            line-height: 22px;
+            font-weight: bold;
+            font-size: 19px;
+            margin-bottom: 2em;
+        }
+        #layout--body #section--contact input {
+            font-size: 20px;
+            text-align: center;
+            display: block;
+            padding: 8px 10px;
+            margin: 0 auto;
+            border: 3px dotted rgb(239,87,39);
+            background-color: transparent;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+        }
+        #layout--body #section--contact #contact--socials {
+            margin-top: 4em;
+            margin-bottom: 3em;
+        }
+            #layout--body #section--contact #contact--socials ul {
+                padding: 0;
+            }
+            #layout--body #section--contact #contact--socials ul li {
+                display: inline-block;
+                width: 70px;
+            }
+        #layout--body #section--contact #contact--footer {
+            margin: auto;
+        }
+            #layout--body #section--contact #contact--footer ul {
+                font-size: 11px;
+                text-align: center;
+                margin-bottom: 1.5em;
+                margin-left: auto;
+                margin-right: auto;
+                width: 650px;
+            }
 
 #layout--footer {
 }
