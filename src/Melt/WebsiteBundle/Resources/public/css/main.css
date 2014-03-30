@@ -29,6 +29,7 @@ body {
 }
     #layout--header a.navbar-brand {
         color: #fff;
+        font-weight: bold;
     }
     #layout--header .navbar-inverse {
         background-color: rgb(239,87,39);
@@ -43,6 +44,9 @@ body {
     {
         color: #fff;
         text-decoration: none;
+    }
+    #layout--header .navbar-inverse .navbar-nav>li>a:hover {
+        background-color: rgb(211,71,28);
     }
 
 #layout--body {
