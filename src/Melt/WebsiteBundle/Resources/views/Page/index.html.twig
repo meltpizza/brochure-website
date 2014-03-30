@@ -15,7 +15,7 @@
         </div>
 
         <div class="col-md-3 text-right">
-            <span class="header">Contact</span>
+	    <span class="header"><a href="##section--contact">Contact</a></span>
         </div>
     </div>
 
@@ -461,9 +461,9 @@
                 <br />
                 <img src="{{ asset('/bundles/website/images/contact_signup_header.png') }}"  class="push--bottom" width="355px" height="60px" />
 
-                <form action="/" method="POST">
-                    <input size="30" name="name"  type="text" class="signup--input" placeholder="NAME"  />
-                    <input size="30" name="email" type="text" class="signup--input" placeholder="EMAIL"  />
+		<form action="{{ path('newsletter_register') }}" method="POST">
+		    <input size="30" name="email" type="email" class="signup--input" placeholder="EMAIL"  />
+		    <button style="display:none" class="btn btn-primary" type="submit">Submit</button>
                 </form>
             </div>
 
@@ -476,11 +476,11 @@
             </div>
 
             <div class="col-md-12 text-center" id="contact--footer">
-                <ul class="nav nav-pills">
-                    <li><a href="#">&copy; 2014 COPYRIGHT MELT</a></li>
+		<ul class="nav">
+		    <li>&copy; 2014 COPYRIGHT MELT</li>
                     <li><a href="#">PRIVACY POLICY</a></li>
-                    <li><a href="#">MAKE LOVE NOT WAR</a></li>
-                    <li><a href="#">DESIGN BY CIP</a></li>
+		    <li>MAKE LOVE NOT WAR</li>
+		    <li><a href="http://www.caniplay.com.au/" target="_blank">DESIGN BY CIP</a></li>
                 </ul>
             </div>
 
