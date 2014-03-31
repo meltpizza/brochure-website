@@ -260,6 +260,23 @@ body {
     font-weight: bold;
 }
 
+#privacy--box {}
+
+    #privacy--box h1 {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    #privacy--box h2 {
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    #privacy--box h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
 /** Style themes **/
 .melt-reversed {
     background-color: rgb(239,87,39);

@@ -16,4 +16,13 @@ class PageController extends Controller
     {
         return array();
     }
+
+    /**
+     * @Route("/privacy")
+     * @Template()
+     */
+    public function privacyAction()
+    {
+        return array();
+    }
 }
