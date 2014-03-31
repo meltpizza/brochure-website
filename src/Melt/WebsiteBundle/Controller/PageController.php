@@ -18,7 +18,7 @@ class PageController extends Controller
     }
 
     /**
-     * @Route("/privacy")
+     * @Route("/privacy", name="page_privacy")
      * @Template()
      */
     public function privacyAction()
