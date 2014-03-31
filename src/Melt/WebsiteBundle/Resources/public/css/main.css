@@ -331,6 +331,10 @@ body {
     #layout--body .melt-excerpt {
         width: 98%;
     }
+    #layout--body .about--icons {
+        height: auto;
+        margin-bottom: 1.5em;
+    }
 }
 @media(min-width:768px){
 }
