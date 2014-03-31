@@ -254,6 +254,11 @@ body {
 #layout--footer {
 }
 
+#thank-you--box h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
 /** Style themes **/
 .melt-reversed {

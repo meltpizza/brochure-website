@@ -1,0 +1,38 @@
+{% extends 'WebsiteBundle:Layout:base.html.twig' %}
+
+{% block body %}
+<!-- LANDING SECTION -->
+<div class="constrained" id="section--top">
+
+    <!-- MAIN NAV -->
+    <div class="row" id="body-nav--container">
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center push--bottom" id="thank-you--box">
+            <h1>Ooops! Something's wrong</h1>
+
+            <p class="melt-excerpt push--top">There's a problem with the submission.</p>
+
+            <p class="melt-excerpt push--top">This is likely due to invalid email address format. 
+            Please try again and check that your email is correct. If you feel this is an error,
+            please email us at it [at] melt.com.au directly.</p>
+
+            <p class="melt-excerpt push--top">Any inconveniences caused is much regretted. Thank you!</p>
+        </div>
+
+        <div class="col-md-4 col-sm-12 text-right body-nav--item">
+            <a href="http://melt.com.au/##section--menu"><img src="{{ asset('/bundles/website/images/body_nav__menu.png') }}" width="125px" height="42px" /></a>
+        </div>
+
+        <div class="col-md-4 col-sm-12 hidden-sm hidden-xs">
+            <a href="http://melt.com.au/"><img src="{{ asset('/bundles/website/images/body_logo.png') }}" width="330px" height="312px" /></a>
+        </div>
+
+        <div class="col-md-4 col-sm-12 body-nav--item">
+            <a href="http://melt.com.au/##section--about"><img src="{{ asset('/bundles/website/images/body_nav__about.png') }}" width="125px" height="42px" /></a>
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock body %}

@@ -25,6 +25,7 @@ class NewsletterController extends Controller
 
         $email = filter_var( strtolower( $request->get('email')), FILTER_SANITIZE_EMAIL);
         if( !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+            return $this->redirect($this->generateUrl('newsletter_error'));
         }
 
         $subscriber = new Subscriber();
@@ -35,7 +36,16 @@ class NewsletterController extends Controller
         $em->persist($subscriber);
         $em->flush();
 
-        print 'Done'; die;
+        return array();
+    }
+
+    /**
+     * @Route("/error", name="newsletter_error")
+     * @Template()
+     */
+    public function errorAction()
+    {
+        //very quick & dirty
         return array();
     }
 }
