@@ -305,3 +305,29 @@ body {
 .soft--sides  { padding-left:   1.5em;
                 padding-right:  1.5em;
               }
+
+/** Media queries **/
+@media(max-width:767px){
+    .constrained {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #layout--body #body-nav--container
+    {
+        margin-top: 0 !important;
+    }
+    #layout--body .body-nav--item
+    {
+        text-align: center !important;
+        padding-top: 1em !important;
+    }
+    #layout--body #section--top .row div {
+        margin-top: 1em;
+        text-align: center !important;
+    }
+}
+@media(min-width:768px){
+}
+@media(min-width:992px){
+}
+@media(min-width:1200px){}
