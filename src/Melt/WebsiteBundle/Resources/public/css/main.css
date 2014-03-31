@@ -325,6 +325,12 @@ body {
         margin-top: 1em;
         text-align: center !important;
     }
+    #layout--body #section--contact #contact--footer ul {
+        width: 100%;
+    }
+    #layout--body .melt-excerpt {
+        width: 98%;
+    }
 }
 @media(min-width:768px){
 }
