@@ -175,12 +175,14 @@ body {
             cursor: pointer;
         }
 
-
+    #section--top .header a,
+    #section--top .header a:hover,
+    #section--top .header a:visited,
+    #section--top .header a:link,
     #section--top .header {
-        font-family: 'FuturaBT-Bold', sans-serif;
         font-weight: bold;
     }
-
+ 
     #layout--body #section--menu {
     }
         #layout--body #section--menu .menu-type-img {
