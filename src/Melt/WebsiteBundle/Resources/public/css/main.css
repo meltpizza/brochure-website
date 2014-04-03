@@ -32,7 +32,7 @@ body {
     display: none;
 }
     #layout--header a.navbar-brand {
-        color: #fff;
+        color: rgb(248,245,231);
         font-weight: bold;
     }
     #layout--header .navbar-inverse {
@@ -46,11 +46,18 @@ body {
     #layout--header .navbar-inverse .navbar-nav>li>a:link,
     #layout--header .navbar-inverse .navbar-nav>li>a:visited
     {
-        color: #fff;
+        color: rgb(248,245,231);
+        font-weight: bold;
+        font-family: 'FuturaBT-Bold', sans-serif;
         text-decoration: none;
+        text-transform: uppercase;
     }
     #layout--header .navbar-inverse .navbar-nav>li>a:hover {
         background-color: rgb(211,71,28);
+    }
+    #layout--header #float-menu--icon {
+        margin-top: 8px;
+        margin-right: 10px;
     }
 
 #layout--body {
