@@ -4,6 +4,10 @@
  * Light beige: rgb(248,245,231);
  * Orange:      rgb(239,87,39);
  */
+
+@import url("//hello.myfonts.net/count/2a89c1");
+@font-face {font-family: 'FuturaBT-Bold';src: url('webfonts/2A89C1_0_0.eot');src: url('webfonts/2A89C1_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2A89C1_0_0.woff') format('woff'),url('webfonts/2A89C1_0_0.ttf') format('truetype');}
+
 * { outline: none; }
 
 *, body, p, section, div,
@@ -170,6 +174,13 @@ body {
         #layout--body .about--icons img {
             cursor: pointer;
         }
+
+
+    #section--top .header {
+        font-family: 'FuturaBT-Bold', sans-serif;
+        font-weight: bold;
+    }
+
     #layout--body #section--menu {
     }
         #layout--body #section--menu .menu-type-img {
