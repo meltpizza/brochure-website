@@ -196,6 +196,7 @@ body {
             font-size: 20px;
             font-weight: bolder;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
         #layout--body #section--menu #menu-type--or {
             margin-top: 8em;
