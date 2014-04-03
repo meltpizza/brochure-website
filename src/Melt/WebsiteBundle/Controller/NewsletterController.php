@@ -6,6 +6,7 @@ use Melt\WebsiteBundle\Entity\Subscriber;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
@@ -17,7 +18,6 @@ class NewsletterController extends Controller
     /**
      * @Route("/register", name="newsletter_register")
      * @Method("POST")
-     * @Template()
      */
     public function registerAction()
     {
@@ -36,11 +36,23 @@ class NewsletterController extends Controller
         $em->persist($subscriber);
         $em->flush();
 
+        return $this->redirect($this->generateUrl('newsletter_accepted'));
+    }
+
+    /**
+     * @Route("/accepted", name="newsletter_accepted")
+     * @Cache(expires="+2 days", public="true")
+     * @Template()
+     */
+    public function acceptedAction()
+    {
+        //very quick & dirty
         return array();
     }
 
     /**
      * @Route("/error", name="newsletter_error")
+     * @Cache(expires="+2 days", public="true")
      * @Template()
      */
     public function errorAction()
