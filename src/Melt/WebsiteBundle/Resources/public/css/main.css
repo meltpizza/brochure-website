@@ -3,6 +3,8 @@
  *
  * Light beige: rgb(248,245,231);
  * Orange:      rgb(239,87,39);
+#section--menu div.row { border: 1px solid green !important; }
+div.row { border: 1px solid red !important; }
  */
 
 @import url("//hello.myfonts.net/count/2a89c1");
@@ -31,10 +33,17 @@ body {
 #layout--header {
     display: none;
 }
+    #layout--header .navbar {
+        width: 100% !important;
+    }
     #layout--header a.navbar-brand {
         color: rgb(248,245,231);
         font-weight: bold;
     }
+        #layout--header .navbar-header img {
+            margin-left: 8px;
+        }
+
     #layout--header .navbar-inverse {
         background-color: rgb(239,87,39);
     }
@@ -350,9 +359,31 @@ body {
               }
 
 /** Media queries **/
+@media(max-width:480px){
+    div.row {
+        width: 100%;
+        margin: 0 auto;
+    }
+        #section--menu .menu-type-img img {
+            width: 280px;
+            height: 225px;
+        }
+
+    .constrained {
+        width: 99%;
+        margin: 0 auto;
+    }
+    #signup-text {
+        width: 278px;
+        height: 47px;
+    }
+    #signup-form input {
+        width: 280px;
+    }
+}
 @media(max-width:767px){
     .constrained {
-        width: 100%;
+        width: 99%;
         margin: 0 auto;
     }
     #layout--body #body-nav--container
@@ -377,6 +408,15 @@ body {
     #layout--body .about--icons {
         height: auto;
         margin-bottom: 1.5em;
+    }
+    #layout--body .border-image-slide {
+        display: none;
+    }
+    div#instafeed {
+        overflow: hidden;
+    }
+    #instafeed img {
+        padding-bottom: 1.5em;
     }
 }
 @media(min-width:768px){

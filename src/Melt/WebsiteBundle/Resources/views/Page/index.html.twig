@@ -56,8 +56,8 @@
 
 <!-- ABOUT SECTION -->
 <div class="melt-marbled" id="section--about">
-    <div class="contrained soft--top">
-        <div class="row">
+    <div class="constrained soft--top">
+        <div class="row" >
             <div class="col-md-12 text-center about--header">
                 <h2 class="body-header header--about">About</h2>
             </div>
@@ -102,7 +102,7 @@
     <div class="constrained soft--top">
         <div class="row">
 
-            <div class="col-md-12 text-center menu--header push--bottom">
+            <div class="col-md-12 col-xs-11 text-center menu--header push--bottom">
                 <h2 class="body-header header--menu">Menu</h2>
             </div>
 
@@ -452,9 +452,9 @@
 
                 <img src="{{ asset('/bundles/website/images/contact_smiley_mail.png') }}"  class="push--bottom" width="180px" height="105px" />
                 <br />
-                <img src="{{ asset('/bundles/website/images/contact_signup_header.png') }}"  class="push--bottom" width="355px" height="60px" />
+                <img src="{{ asset('/bundles/website/images/contact_signup_header.png') }}"  class="push--bottom" id="signup-text" width="355px" height="60px" />
 
-                <form action="{{ path('newsletter_register') }}" method="POST">
+                <form action="{{ path('newsletter_register') }}" method="POST" id="signup-form">
                     <input size="30" name="email" type="email" class="signup--input" placeholder="EMAIL"  />
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
