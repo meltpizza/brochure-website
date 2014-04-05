@@ -48,7 +48,7 @@ body {
         background-color: rgb(239,87,39);
     }
     #layout--header .navbar-inverse.navbar-fixed-top {
-        border-color: rgb(239,87,39);
+        border-bottom: 1px solid rgb(201,64,23);
     }
     #layout--header .navbar-inverse .navbar-nav>li>a,
     #layout--header .navbar-inverse .navbar-nav>li>a:hover,
@@ -382,6 +382,10 @@ body {
     }
 }
 @media(max-width:767px){
+    div.row {
+        width: 100%;
+        margin: 0 auto;
+    }
     .constrained {
         width: 99%;
         margin: 0 auto;
