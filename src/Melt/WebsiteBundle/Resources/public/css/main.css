@@ -8,7 +8,7 @@ div.row { border: 1px solid red !important; }
  */
 
 @import url("//hello.myfonts.net/count/2a89c1");
-@font-face {font-family: 'FuturaBT-Bold';src: url('webfonts/2A89C1_0_0.eot');src: url('webfonts/2A89C1_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2A89C1_0_0.woff') format('woff'),url('webfonts/2A89C1_0_0.ttf') format('truetype');}
+@font-face {font-family: 'FuturaBT-Bold';src: url('/bundles/website/css/webfonts/2A89C1_0_0.eot');src: url('/bundles/website/css/webfonts/2A89C1_0_0.eot?#iefix') format('embedded-opentype'),url('/bundles/website/css/webfonts/2A89C1_0_0.woff') format('woff'),url('/bundles/website/css/webfonts/2A89C1_0_0.ttf') format('truetype');}
 
 * { outline: none; }
 
@@ -107,8 +107,13 @@ body {
             margin-right: 12px;
         }
     #layout--body .border-image-slide {
+        width: 100%;
         height: 550px;
+        overflow: hidden;
     }
+        #layout--body .border-image-slide img {
+            width: 100%;
+        }
     #layout--body .about--header {
         margin-bottom: 3em;
     }

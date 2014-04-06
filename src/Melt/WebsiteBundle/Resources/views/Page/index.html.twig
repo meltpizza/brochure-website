@@ -1,6 +1,14 @@
 {% extends 'WebsiteBundle:Layout:base.html.twig' %}
 
 {% block body %}
+<div class="push--top constrained" id="section--mobile-top">
+    <div class="row">
+        <div class="hidden-lg hidden-md col-xs-12 col-sm-12 text-center">
+            <img src="{{ asset('/bundles/website/images/body_logo.png') }}" width="280px" height="265px" />
+        </div>
+    </div>
+</div>
+
 <!-- LANDING SECTION -->
 <div class="constrained" id="section--top">
     <div class="top--nav row">
@@ -493,7 +501,6 @@ AA_CONFIG = {
 };
 
 var feed = new Instafeed({
-    //tagName: 'meltpizza',
     get: 'user',
     userId: 461693317,
     limit: 5,
@@ -502,13 +509,6 @@ var feed = new Instafeed({
 feed.run();
 
 $(function() {
-    $('.border-image-slide').superslides({
-        //play                : 10000,
-        animation           : 'fade',
-        animation_speed     : 'slow',
-        inherit_height_from : '.border-image-slide',
-    });
-
     $(window).scroll(function(){
         if($(document).scrollTop() > 350)
         {
