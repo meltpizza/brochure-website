@@ -11,6 +11,7 @@ class PageController extends Controller
 {
     /**
      * @Route("/")
+     * @Cache(expires="+2 days", public="true")
      * @Template()
      */
     public function indexAction()
