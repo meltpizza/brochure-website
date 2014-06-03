@@ -60,7 +60,7 @@
 <!-- BORDER IMAGE SECTION -->
 <div class="border-image-slide" id="border-image--about">
     <div class="slides-container">
-        <img src="{{ asset('/bundles/website/images/border_img_slide_02.jpg') }}" />
+        <img data-stellar-ratio="0.1" src="{{ asset('/bundles/website/images/border_img_slide_02.jpg') }}" />
     </div>
 </div>
 
@@ -103,7 +103,7 @@
 <!-- BORDER IMAGE SECTION -->
 <div class="border-image-slide" id="border-image--about">
     <div class="slides-container">
-        <img src="{{ asset('/bundles/website/images/border_img_slide_01.jpg') }}" />
+        <img data-stellar-ratio="0.5" src="{{ asset('/bundles/website/images/border_img_slide_01.jpg') }}" />
     </div>
 </div>
 
@@ -474,6 +474,8 @@ var feed = new Instafeed({
 feed.run();
 
 $(function() {
+    $.stellar();
+
     $(window).scroll(function(){
         if($(document).scrollTop() > 350)
         {
