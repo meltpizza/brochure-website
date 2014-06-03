@@ -73,27 +73,103 @@
             </div>
 
             <div class="col-md-4 about--icons">
-                <img src="{{ asset('/bundles/website/images/about_icons_napoli.png') }}"  width="180px" height="180px" />
+                <div class="flip" >
+                    <div class="card">
+                        <div class="face front">
+                            <img src="{{ asset('/bundles/website/images/about_icons_napoli.png') }}"  width="180px" height="180px" />
+                        </div>
+
+                        <div class="face back">
+                            <h4>Super thin Napoli style pizza</h4>
+                            <p>Our pizzas are inspired by the traditional pizzas from Naples, Italy - the birthplace of pizza. We honour
+                            the heritage of Naples with super-thin handcrafted pizzas made using the highest quality ingredients.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-md-4 about--icons">
-                <img src="{{ asset('/bundles/website/images/about_icons_fresh.png') }}"  width="180px" height="180px" />
+                <div class="flip" >
+                    <div class="card">
+                        <div class="face front">
+                            <img src="{{ asset('/bundles/website/images/about_icons_fresh.png') }}"  width="180px" height="180px" />
+                        </div>
+
+                        <div class="face back">
+                            <h4>Fresh local produce</h4>
+                            <p>Our fresh mozzarella is made at a small farm in Donnybrook, Victoria. We use local veggies and lean,
+                            natural proteins. Our ham and chicken are 100% free range and our meatballs are made using only 100% 
+                            grass-fed beef.</p>
+                        </div>
+                    </div><!-- card -->
+                </div><!-- flip -->
             </div>
 
             <div class="col-md-4 about--icons">
-                <img src="{{ asset('/bundles/website/images/about_icons_dough.png') }}"  width="180px" height="180px" />
+                <div class="flip" >
+                    <div class="card">
+                        <div class="face front">
+                            <img src="{{ asset('/bundles/website/images/about_icons_dough.png') }}"  width="180px" height="180px" />
+                        </div>
+
+                        <div class="face back">
+                            <h4>Lighter dough</h4>
+                            <p>There’s no oil, fat or sugar in our dough or sauce which we make fresh daily. Our classic Neapolitan dough
+                            is made from only water, flour, yeast and salt. There's no artificial anything - it's a very light pizza and
+                            you don't feel bloated afterwards.</p>
+                        </div>
+                    </div><!-- card -->
+                </div><!-- flip -->
             </div>
 
             <div class="col-md-4 about--icons">
-                <img src="{{ asset('/bundles/website/images/about_icons_custom.png') }}"  width="180px" height="180px" />
+                <div class="flip" >
+                    <div class="card">
+                        <div class="face front">
+                            <img src="{{ asset('/bundles/website/images/about_icons_custom.png') }}"  width="180px" height="180px" />
+                        </div>
+
+                        <div class="face back">
+                            <h4>Classic or Custom</h4>
+                            <p>Choose from one of our eight chef-designed classic pizzas, or customise your own from our open display of
+                            premium meats, cheeses and vegetables. We also have vegan cheese and a premium gluten free crust available on
+                            request.</p>
+                        </div>
+                    </div><!-- card -->
+                </div><!-- flip -->
             </div>
 
             <div class="col-md-4 about--icons">
-                <img src="{{ asset('/bundles/website/images/about_icons_400.png') }}"  width="180px" height="180px" />
+                <div class="flip" >
+                    <div class="card">
+                        <div class="face front">
+                            <img src="{{ asset('/bundles/website/images/about_icons_400.png') }}"  width="180px" height="180px" />
+                        </div>
+
+                        <div class="face back">
+                            <h4>400 degree stone oven</h4>
+                            <p>Traditional Neapolitan pizzas are cooked in extremely hot, open-flame ovens. Our stone oven burns at 
+                            400 degrees celsius and cooks our Napoli-style pizzas in around 2 minutes.</p>
+                        </div>
+                    </div><!-- card -->
+                </div><!-- flip -->
             </div>
 
             <div class="col-md-4 about--icons">
-                <img src="{{ asset('/bundles/website/images/about_icons_fast.png') }}"  width="180px" height="180px" />
+                <div class="flip" >
+                    <div class="card">
+                        <div class="face front">
+                            <img src="{{ asset('/bundles/website/images/about_icons_fast.png') }}"  width="180px" height="180px" />
+                        </div>
+
+                        <div class="face back">
+                            <h4>Super-fast 2 minute bake</h4>
+                            <p>Our super-thin base combined with the intense heat of our 400 degree oven means that our pizzas cook
+                            in around two minutes flat. The fast bake and lighter dough makes MELT perfect for quick lunch or an easy,
+                            casual dinner.</p>
+                        </div>
+                    </div><!-- card -->
+                </div><!-- flip -->
             </div>
 
         </div>
@@ -487,6 +563,14 @@ $(function() {
             $('#layout--header').fadeOut();
         }
     });
+
+    $('.flip').click(function(){
+        $(this).find('.card').addClass('flipped').mouseleave(function(){
+            $(this).removeClass('flipped');
+        });
+        return false;
+    });
+
 });
 </script>
 {% endblock javascript %}
