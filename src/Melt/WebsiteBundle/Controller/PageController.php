@@ -2,6 +2,7 @@
 
 namespace Melt\WebsiteBundle\Controller;
 
+use Melt\WebsiteBundle\Entity\Media;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
@@ -16,7 +17,11 @@ class PageController extends Controller
      */
     public function indexAction()
     {
-        return array();
+        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findByActive(1);
+
+        return array(
+            'media' => $media
+        );
     }
 
     /**
