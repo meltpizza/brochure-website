@@ -491,7 +491,7 @@
             <div class="col-md-12 text-center">
                 <ul class="media-list">
                     {% for m in media %}
-                    <li><a href="{{ m.link }}">{{ m.title }}</a>, {{ m.author }} {{ m.created }}</li>
+                    <li><a target="_blank" href="{{ m.link }}">{{ m.title }}</a>, {{ m.author }} {{ m.created }}</li>
                     {% endfor %}
                 </ul>
             </div>
