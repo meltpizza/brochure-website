@@ -133,37 +133,41 @@ body {
 
         background-image: url(/bundles/website/images/body_headers.png);
         background-repeat: no-repeat;
-        background-size: 180px 281px;
-        background-position: 0 0;
+        background-size: 180px 308px;
+        background-position: 0 3px;
     }
         #layout--body h2.body-header.header--about {
         }
         #layout--body h2.body-header.header--menu {
-            background-position: 0 -30px;
+            background-position: 0 -27px;
         }
         #layout--body h2.body-header.header--salads {
-            background-position: 0 -92px;
+            background-position: 0 -86px;
             width: 135px;
         }
         #layout--body h2.body-header.header--panuzzos {
             width: 180px;
             height: 40px;
-            background-position: 0 -220px;
+            background-position: 0 -208px;
         }
         #layout--body h2.body-header.header--sides {
             width: 100px;
-            background-position: 0 -120px;
+            background-position: 0 -114px;
         }
         #layout--body h2.body-header.header--sweets {
-            background-position: 0 -155px;
+            background-position: 0 -144px;
         }
         #layout--body h2.body-header.header--drinks {
-            background-position: 0 -185px;
+            background-position: 0 -172px;
         }
         #layout--body h2.body-header.header--contact {
             width: 158px;
-            margin-bottom: 1.25em;
-            background-position: 0 -60px;
+            margin-bottom: 0.25em;
+            background-position: 0 -54px;
+        }
+        #layout--body h2.body-header.header--media {
+            margin-bottom: 0.25em;
+            background-position: 0 -247px;
         }
 
     #layout--body h2.drinks-header {
