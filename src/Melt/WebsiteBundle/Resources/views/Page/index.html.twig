@@ -24,6 +24,8 @@
 
         <div class="col-md-3 col-sm-12 col-xs-12 text-right">
             <span class="header">
+                <a data-toggle="modal" data-target="#booking-modal" href="##section--contact">Book</a>
+                .
                 <a href="##section--contact">Contact</a>
                 .
                 <a target="_blank"
@@ -538,6 +540,28 @@
         </div><!-- ROW -->
     </div><!-- contrained -->
 </div><!-- #section-contact -->
+
+<div class="modal fade" id="booking-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Melt Reservation</h4>
+            </div>
+
+            <div class="modal-body">
+                <iframe style="width: 522px; height: 452px; overflow: hidden; border: 0;" src="https://www.obee.com.au/melt/">
+                    Your browser cannot load the Online Booking Widget.<BR>
+                    <a href="https://www.obee.com.au/melt/">Click here to make a booking instead.</a>
+                </iframe>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 {% endblock body %}
 

@@ -302,6 +302,11 @@ body {
                 font-weight: bold;
             }
 
+#booking-modal .modal-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 #layout--footer {
 }
 
