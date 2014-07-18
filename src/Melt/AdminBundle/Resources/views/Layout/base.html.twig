@@ -20,6 +20,23 @@
 
     {% include 'AdminBundle:Layout:navigation.top.html.twig' %}
 
+    {% for message in app.session.flashbag.get('success') %}
+    <div class="container">
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            {{ message }}
+        </div>
+    </div>
+    {% endfor %}
+    {% for message in app.session.flashbag.get('error') %}
+    <div class="container">
+        <div class="alert alert-error">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            {{ message }}
+        </div>
+    </div>
+    {% endfor %}
+
     <div id="body">
         {% block body %}{% endblock body %}
     </div>
