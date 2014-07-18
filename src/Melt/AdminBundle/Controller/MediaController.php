@@ -19,7 +19,7 @@ class MediaController extends Controller
      */
     public function indexAction()
     {
-        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findByActive(1);
+        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findAll();
 
         return array(
             'media' => $media
@@ -58,7 +58,7 @@ class MediaController extends Controller
 
 
     /**
-     * @Route("/save/{id}", name="admin_media_save" )
+     * @Route("/save/{id}", name="admin_media_save", defaults={"id":null} )
      * @Template()
      */
     public function saveAction($id)
@@ -82,16 +82,36 @@ class MediaController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $media->setAuthorLink("");
+            $media->setActive(1);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($media);
             $em->flush();
 
             $this->get('session')->getFlashBag()->add('success', 'Media saved');
-
             return $this->redirect($this->generateUrl('admin_media_index'));
         } else {
+            $this->get('session')->getFlashBag()->add('error', 'Media could not be saved. Some errors occurred.');
             return $this->redirect($this->generateUrl('admin_media_edit', array('id' => $media->getId())) );
         }
     }//saveAction
+
+
+    /**
+     * @Route("/toggle/{id}", name="admin_media_toggle" )
+     * @Template()
+     */
+    public function toggleAction($id)
+    {
+        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->find($id);
+        $media->setActive( !$media->getActive() );
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($media);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('admin_media_index'));
+    }//toggleAction
+
 
 }//MediaController

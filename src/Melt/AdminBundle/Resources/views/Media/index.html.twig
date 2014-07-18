@@ -3,6 +3,11 @@
 {% block body %}
 <section id="section-media-index">
     <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="{{ path('admin_media_edit') }}" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span> New</a>
+            </div>
+        </div>
         <table class="table table-striped">
         <thead>
             <tr>
@@ -22,9 +27,9 @@
                 <td>
                     <a href="{{ path('admin_media_edit', {'id':m.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
                     {% if m.active == 1 %}
-                        <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-eye-close"></span> Disable</button>
+                        <a href="{{ path('admin_media_toggle', {'id':m.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-eye-close"></span> </a>
                     {% else %}
-                        <button class="btn btn-sm btn-default"><span class="glyphicon glyphicon-eye"></span> Enable</button>
+                        <a href="{{ path('admin_media_toggle', {'id':m.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-eye-open"></span> </a>
                     {% endif %}
                 </td>
             </tr>
