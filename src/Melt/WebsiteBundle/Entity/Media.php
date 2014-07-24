@@ -37,6 +37,11 @@ class Media
     protected $author_link;
 
     /**
+     * @ORM\Column(type="integer", length=5)
+     */
+    protected $order;
+
+    /**
      * @ORM\Column(type="integer", length=1)
      */
     protected $active;

@@ -17,7 +17,7 @@ class PageController extends Controller
      */
     public function indexAction()
     {
-        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findByActive(1);
+        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findBy(array('active'=>1), array('order' => 'DESC'));
 
         return array(
             'media' => $media

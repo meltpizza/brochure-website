@@ -47,9 +47,6 @@ class MediaController extends Controller
                      ->add('save'    , 'submit')
                      ->getForm();
 
-        //print '<pre>'; print_r($media);
-        //die;
-
         return array(
             'form'  => $form->createView(),
             'media' => $media
