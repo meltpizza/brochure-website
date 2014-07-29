@@ -97,6 +97,12 @@ body {
     #layout--body #body-nav--container {
         margin-top: 2.5em;
     }
+    #layout--body #body-nav--about {
+        padding-top: 0.5em;
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
     #layout--body #instafeed {
         text-align: center;
         padding: 20px 0px 10px 10px;
