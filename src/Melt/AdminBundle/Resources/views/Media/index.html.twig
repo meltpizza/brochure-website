@@ -1,41 +1,55 @@
 {% extends'AdminBundle:Layout:base.html.twig' %}
 
 {% block body %}
+<form method="POST" action="{{ path('admin_media_save_order') }}">
 <section id="section-media-index">
     <div class="container">
+
         <div class="row">
             <div class="col-md-12">
-                <a href="{{ path('admin_media_edit') }}" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span> New</a>
+                <div class="btn-group pull-right">
+                    <a href="{{ path('admin_media_edit') }}" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New Media</a>
+                    <button id="update-order" class="btn btn-primary"><span class="glyphicon glyphicon-sort-by-attributes"></span> Update Order</button>
+                </div>
             </div>
-        </div>
-        <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Created</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+        </div><!-- row -->
 
-        <tbody>
-            {% for m in media %}
-            <tr>
-                <td>{{ m.title|truncate(45, '...') }} (<a href="{{ m.link }}" target="_blank">Link</a>)</td>
-                <td>{{ m.author }}</td>
-                <td>{{ m.created }}</td>
-                <td>
-                    <a href="{{ path('admin_media_edit', {'id':m.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
-                    {% if m.active == 1 %}
-                        <a href="{{ path('admin_media_toggle', {'id':m.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-eye-close"></span> </a>
-                    {% else %}
-                        <a href="{{ path('admin_media_toggle', {'id':m.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-eye-open"></span> </a>
-                    {% endif %}
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-        </table>
-    </div>
+
+        <div class="row">
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Created</th>
+                    <th>Order</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for m in media %}
+                <tr>
+                    <td>{{ m.title|truncate(45, '...') }} (<a href="{{ m.link }}" target="_blank">Link</a>)</td>
+                    <td>{{ m.author }}</td>
+                    <td>{{ m.created }}</td>
+                    <td><input class="form-control" type="text" size="3" value="{% if m.order > 0 %} {{ m.order }} {% else %} {{ m.id }} {% endif %}" name="order[]"></td>
+                    <td>
+                        <a href="{{ path('admin_media_edit', {'id':m.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                        {% if m.active == 1 %}
+                            <a href="{{ path('admin_media_toggle', {'id':m.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-eye-close"></span> </a>
+                        {% else %}
+                            <a href="{{ path('admin_media_toggle', {'id':m.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-eye-open"></span> </a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        </div><!-- row -->
+
+
+    </div><!-- container -->
 </section>
+</form>
 {% endblock body %}

@@ -199,4 +199,27 @@ class Media
     {
         return $this->created;
     }
+
+    /**
+     * Set order
+     *
+     * @param integer $order
+     * @return Media
+     */
+    public function setOrder($order)
+    {
+        $this->order = $order;
+
+        return $this;
+    }
+
+    /**
+     * Get order
+     *
+     * @return integer 
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
 }

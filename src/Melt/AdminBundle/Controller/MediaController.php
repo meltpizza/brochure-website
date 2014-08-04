@@ -19,7 +19,7 @@ class MediaController extends Controller
      */
     public function indexAction()
     {
-        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findAll();
+        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findBy(array(), array('order' => 'DESC'));
 
         return array(
             'media' => $media
@@ -52,6 +52,35 @@ class MediaController extends Controller
             'media' => $media
         );
     }//editAction
+
+
+    /**
+     * @Route("/save/order", name="admin_media_save_order" )
+     * @Template()
+     */
+    public function saveOrderAction() {
+        $order_array = Array();
+
+        $request = $this->getRequest();
+        $order_array = $request->get('order');
+
+        foreach($order_array as $order => $item_id) {
+            $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->find($item_id);
+            $media->setOrder($order+1);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($media);
+            $em->flush();
+        }
+
+        $this->get('session')->getFlashBag()->add('success', 'Media ordering saved');
+        return $this->redirect($this->generateUrl('admin_media_index'));
+
+        print '<pre>';
+        print_r($order_array);
+        print '</pre>';
+        die;
+    }
 
 
     /**
