@@ -39,7 +39,7 @@ class Media
     /**
      * @ORM\Column(type="integer", length=5)
      */
-    protected $order;
+    protected $ordering;
 
     /**
      * @ORM\Column(type="integer", length=1)
@@ -201,25 +201,25 @@ class Media
     }
 
     /**
-     * Set order
+     * Set ordering
      *
-     * @param integer $order
+     * @param integer $ordering
      * @return Media
      */
-    public function setOrder($order)
+    public function setOrdering($ordering)
     {
-        $this->order = $order;
+        $this->ordering = $ordering;
 
         return $this;
     }
 
     /**
-     * Get order
+     * Get ordering
      *
      * @return integer 
      */
-    public function getOrder()
+    public function getOrdering()
     {
-        return $this->order;
+        return $this->ordering;
     }
 }

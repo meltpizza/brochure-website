@@ -19,7 +19,7 @@ class MediaController extends Controller
      */
     public function indexAction()
     {
-        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findBy(array(), array('order' => 'DESC'));
+        $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findBy(array(), array('ordering' => 'ASC'));
 
         return array(
             'media' => $media
@@ -66,7 +66,7 @@ class MediaController extends Controller
 
         foreach($order_array as $order => $item_id) {
             $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->find($item_id);
-            $media->setOrder($order+1);
+            $media->setOrdering($order);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($media);
@@ -75,11 +75,6 @@ class MediaController extends Controller
 
         $this->get('session')->getFlashBag()->add('success', 'Media ordering saved');
         return $this->redirect($this->generateUrl('admin_media_index'));
-
-        print '<pre>';
-        print_r($order_array);
-        print '</pre>';
-        die;
     }
 
 
