@@ -64,7 +64,7 @@ class MediaController extends Controller
         $request = $this->getRequest();
         $order_array = $request->get('order');
 
-        foreach($order_array as $order => $item_id) {
+        foreach($order_array as $item_id => $order) {
             $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->find($item_id);
             $media->setOrdering($order);
 
