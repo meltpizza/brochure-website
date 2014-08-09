@@ -1,0 +1,51 @@
+{% extends 'AdminBundle:Layout:base.html.twig' %}
+
+{% block body %}
+<section id="section-partner-edit">
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+        {{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Edit Partner</h3>
+                </div>
+
+                <div class="panel-body">
+                    <div class="form-group">
+                        {{ form_label(form.name, 'Name') }}
+                        {{ form_errors(form.name) }}
+                        {{ form_widget(form.name, {'attr': {'class':'form-control'}}) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.description, 'Description') }}
+                        {{ form_errors(form.description) }}
+                        {{ form_widget(form.description, {'attr': {'class':'form-control'}}) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.link, 'Link') }}
+                        {{ form_errors(form.link) }}
+                        {{ form_widget(form.link, {'attr': {'class':'form-control'}}) }}
+                    </div>
+
+                </div><!-- panel-body -->
+
+                <div class="panel-footer" style="text-align: right;">
+                    <a href="{{ path('admin_partner_index') }}">Cancel</a>&nbsp;&nbsp; 
+                    {{ form_widget(form.save, {'attr': {'class':'btn btn-default'}}) }}
+                </div>
+            </div><!-- panel -->
+
+        {{ form_end(form) }}
+        </div><!-- col -->
+
+    </div><!-- row -->
+</div><!-- container -->
+</section>
+{% endblock body %}
