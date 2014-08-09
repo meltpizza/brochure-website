@@ -12,7 +12,11 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Edit Media</h3>
+                    {% if media.id %}
+                        <h3 class="panel-title">Edit Media</h3>
+                    {% else %}
+                        <h3 class="panel-title">New Media</h3>
+                    {% endif %}
                 </div>
 
                 <div class="panel-body">

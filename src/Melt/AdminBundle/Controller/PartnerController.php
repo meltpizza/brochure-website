@@ -112,10 +112,10 @@ class PartnerController extends Controller
             $em->persist($partner);
             $em->flush();
 
-            $this->get('session')->getFlashBag()->add('success', 'partner saved');
+            $this->get('session')->getFlashBag()->add('success', 'Partner saved');
             return $this->redirect($this->generateUrl('admin_partner_index'));
         } else {
-            $this->get('session')->getFlashBag()->add('error', 'partner could not be saved. Some errors occurred.');
+            $this->get('session')->getFlashBag()->add('error', 'Partner could not be saved. Some errors occurred.');
             return $this->redirect($this->generateUrl('admin_partner_edit', array('id' => $partner->getId())) );
         }
     }//saveAction

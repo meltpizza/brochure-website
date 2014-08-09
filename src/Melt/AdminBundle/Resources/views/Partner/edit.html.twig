@@ -12,7 +12,11 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Edit Partner</h3>
+                    {% if partner.id %}
+                        <h3 class="panel-title">Edit Partner</h3>
+                    {% else %}
+                        <h3 class="panel-title">New Partner</h3>
+                    {% endif %}
                 </div>
 
                 <div class="panel-body">
