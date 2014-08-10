@@ -18,7 +18,7 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Link</th>
+                    <th>URL Name</th>
                     <th>Created</th>
                     <th>Action</th>
                 </tr>
@@ -28,7 +28,7 @@
                 {% for p in partners %}
                 <tr>
                     <td>{{ p.name|truncate(45, '...') }} (<a href="{{ p.link }}" target="_blank">Link</a>)</td>
-                    <td>{{ p.link }}</td>
+                    <td>/{{ p.code }}</td>
                     <td>{{ p.created | date('jS M Y, g:ia ') }}</td>
                     <td>
                         <a href="{{ path('admin_partner_edit', {'id':p.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
