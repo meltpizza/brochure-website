@@ -10,7 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 
 /**
- * @Route("/partner")
+ * @Route("/partners")
  */
 class PartnerController extends Controller
 {
@@ -28,8 +28,8 @@ class PartnerController extends Controller
      * @Route("/{partner_code}")
      * @Template()
      */
-    public function parnerAction()
+    public function partnerAction()
     {
-        return $this->redirect($this->generateUrl('page_home'));
+        return array();
     }
 }//PartnerController
