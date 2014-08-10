@@ -37,7 +37,7 @@ class Media
     protected $author_link;
 
     /**
-     * @ORM\Column(type="integer", length=5)
+     * @ORM\Column(type="integer", length=5, nullable=true, options={"default":0})
      */
     protected $ordering;
 

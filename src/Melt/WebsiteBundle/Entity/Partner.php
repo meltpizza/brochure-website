@@ -23,6 +23,11 @@ class Partner
     protected $name;
 
     /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $code;
+
+    /**
      * @ORM\Column(type="text")
      */
     protected $description;
@@ -237,5 +242,28 @@ class Partner
     public function getEntries()
     {
         return $this->entries;
+    }
+
+    /**
+     * Set code
+     *
+     * @param string $code
+     * @return Partner
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+
+        return $this;
+    }
+
+    /**
+     * Get code
+     *
+     * @return string 
+     */
+    public function getCode()
+    {
+        return $this->code;
     }
 }

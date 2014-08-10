@@ -11,7 +11,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class PageController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="page_home")
      * @Cache(expires="+2 days", public="true")
      * @Template()
      */
