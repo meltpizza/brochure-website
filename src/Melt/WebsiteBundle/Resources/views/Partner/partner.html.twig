@@ -6,8 +6,7 @@
     <div class="constrained soft--top">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2>Melt Raise The Dough</h2>
-                <h3>{{ partner.name }}</h3>
+                <h2>RAISE DOUGH FOR {{ partner.name }}</h2>
 
                 {{ form_start(form) }}
                     {{ form_errors(form) }}
@@ -28,8 +27,23 @@
 
                 {{ form_end(form) }}
 
+                <p>You will receive registration confirmation via email, please present this in-store at MELT
+                on [Insert event date] and 25% of the sale proceeds from the pizzas you and community buys will
+                be donated back to {{ partner.name }} by way of fundraising. Good luck!</p>
+
             </div><!-- col -->
         </div><!-- row -->
     </div><!-- constrained -->
 </section>
 {% endblock body %}
+
+{% block javascript %}
+<script type="text/javascript">
+$(function() {
+    setTimeout(function() {
+        $('#layout--header').fadeIn();
+    }, 1000);
+});
+</script>
+{% endblock javascript %}
+

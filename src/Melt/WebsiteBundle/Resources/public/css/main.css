@@ -310,6 +310,7 @@ body {
             }
 
 #section--partner-partner {
+    margin-top: 50px;
 }
     #section--partner-partner h2 {
         font-family: 'Helvetica', 'Arial', sans-serif;
@@ -329,6 +330,9 @@ body {
         background-color: transparent;
         margin-bottom: 1em;
         text-transform: uppercase;
+    }
+    #section--partner-partner .form-group input.form-control[type="text"] {
+        width: 400px;
     }
 
 #booking-modal .modal-title {
