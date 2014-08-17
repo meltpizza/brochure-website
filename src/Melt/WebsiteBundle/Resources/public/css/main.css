@@ -30,6 +30,13 @@ body {
     color: rgb(239,87,39);
 }
 
+.btn-primary {
+    background-color: rgb(239,87,39);
+    border-color: rgb(239,87,39);
+    font-weight: bold;
+    font-size: 18px;
+}
+
 #layout--header {
     display: none;
 }
@@ -295,18 +302,34 @@ body {
             #layout--body #section--contact #contact--footer li {
                 display: inline-block;
             }
-        #layout--body #section--contact .btn-primary {
-            background-color: rgb(239,87,39);
-            border-color: rgb(239,87,39);
-            font-weight: bold;
-            font-size: 18px;
-        }
         #layout--body .media-list li {
             list-style: none;
         }
             #layout--body .media-list li a {
                 font-weight: bold;
             }
+
+#section--partner-partner {
+}
+    #section--partner-partner h2 {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    #section--partner-partner .form-group .form-control {
+        font-size: 20px;
+        text-align: center;
+        display: block;
+        padding: 8px 10px;
+        height: auto;
+        width: 60%;
+        margin: 0 auto;
+        border: 2px dotted rgb(239,87,39);
+        background-color: transparent;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+    }
 
 #booking-modal .modal-title {
     font-weight: bold;

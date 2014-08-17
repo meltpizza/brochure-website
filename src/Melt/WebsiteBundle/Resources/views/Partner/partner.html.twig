@@ -2,10 +2,10 @@
 
 {% block body %}
 <!-- PARTNER SECTION -->
-<section class="" id="section--menu">
+<section class="" id="section--partner-partner">
     <div class="constrained soft--top">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <h2>Melt Raise The Dough</h2>
                 <h3>{{ partner.name }}</h3>
 
@@ -24,7 +24,7 @@
                         {{ form_widget(form.email, {'attr': {'class':'form-control', 'required':'required'}}) }}
                     </div>
 
-                    {{ form_widget(form.save, {'attr': {'class':'btn btn-default'}}) }}
+                    {{ form_widget(form.submit, {'attr': {'class':'btn btn-primary'}}) }}
 
                 {{ form_end(form) }}
 
