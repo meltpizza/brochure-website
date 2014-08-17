@@ -545,27 +545,7 @@
     </div><!-- contrained -->
 </div><!-- #section-contact -->
 
-<div class="modal fade" id="booking-modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">Melt Reservation</h4>
-            </div>
-
-            <div class="modal-body">
-                <iframe style="width:100%; height: 452px; overflow: hidden; border: 0;" src="https://www.obee.com.au/melt/?m=t">
-                    Your browser cannot load the Online Booking Widget.<BR>
-                    <a href="https://www.obee.com.au/melt/?m=t">Click here to make a booking instead.</a>
-                </iframe>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+{% include 'WebsiteBundle:Layout:booking_modal.html.twig' %}
 
 {% endblock body %}
 

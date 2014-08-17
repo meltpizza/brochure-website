@@ -5,6 +5,9 @@
 <section class="" id="section--partner-partner">
     <div class="constrained soft--top">
         <div class="row">
+            <div class="col-md-12 text-center push--top hidden-sm hidden-xs">
+                <img src="{{ asset('/bundles/website/images/menu_divider_top.png') }}"  width="1000px" height="66px" />
+            </div>
             <div class="col-md-12 text-center">
                 <h2>RAISE DOUGH FOR {{ partner.name }}</h2>
 
@@ -32,9 +35,16 @@
                 be donated back to {{ partner.name }} by way of fundraising. Good luck!</p>
 
             </div><!-- col -->
+
+            <div class="col-md-12 text-center push--top hidden-sm hidden-xs" id="menu--bottom-divider">
+                <img src="{{ asset('/bundles/website/images/menu_divider_bottom.png') }}"  width="1000px" height="66px" />
+            </div>
+
         </div><!-- row -->
     </div><!-- constrained -->
 </section>
+
+{% include 'WebsiteBundle:Layout:booking_modal.html.twig' %}
 {% endblock body %}
 
 {% block javascript %}

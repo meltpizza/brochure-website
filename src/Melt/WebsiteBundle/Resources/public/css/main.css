@@ -317,6 +317,11 @@ body {
         font-weight: bold;
         font-size: 20px;
         text-transform: uppercase;
+        margin-bottom: 1.5em;
+    }
+    #section--partner-partner p {
+        margin: 2em auto;
+        width: 400px;
     }
     #section--partner-partner .form-group .form-control {
         font-size: 20px;
@@ -332,7 +337,13 @@ body {
         text-transform: uppercase;
     }
     #section--partner-partner .form-group input.form-control[type="text"] {
+        color: #d83d0d;
+        font-weight: bold;
         width: 400px;
+    }
+    #section--partner-partner .btn-primary:hover {
+        border-color: #d83d0d;
+        background-color: #d83d0d;
     }
 
 #booking-modal .modal-title {
