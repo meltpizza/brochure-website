@@ -40,10 +40,16 @@ class PartnerController extends Controller
             $partner = new Partner();
         }
 
+        $years[] = date('Y');
+        for($i=1; $i<=3; $i++) {
+            $years[$i] = $years[$i-1]+1;
+        }
+
         $form = $this->createFormBuilder($partner)
                      ->setAction($this->generateUrl('admin_partner_save', array('id'=>$id)))
                      ->add('name'        , 'text')
                      ->add('code'        , 'text')
+                     ->add('event_date'  , 'date', array('years' => $years) )
                      ->add('description' , 'textarea')
                      ->add('link'        , 'text')
                      ->add('save'        , 'submit')

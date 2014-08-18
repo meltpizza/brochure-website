@@ -43,7 +43,7 @@ class Partner
     protected $active;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="date")
      */
     protected $event_date;
 
