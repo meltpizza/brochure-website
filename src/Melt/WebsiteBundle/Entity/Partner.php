@@ -45,6 +45,11 @@ class Partner
     /**
      * @ORM\Column(type="datetime")
      */
+    protected $event_date;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
     protected $created;
 
     /**
@@ -265,5 +270,28 @@ class Partner
     public function getCode()
     {
         return $this->code;
+    }
+
+    /**
+     * Set event_date
+     *
+     * @param \DateTime $eventDate
+     * @return Partner
+     */
+    public function setEventDate($eventDate)
+    {
+        $this->event_date = $eventDate;
+
+        return $this;
+    }
+
+    /**
+     * Get event_date
+     *
+     * @return \DateTime 
+     */
+    public function getEventDate()
+    {
+        return $this->event_date;
     }
 }
