@@ -146,7 +146,7 @@ body {
 
         background-image: url(/bundles/website/images/body_headers.png);
         background-repeat: no-repeat;
-        background-size: 180px 308px;
+        background-size: 180px 326px;
         background-position: 0 3px;
     }
         #layout--body h2.body-header.header--about {
@@ -181,6 +181,10 @@ body {
         #layout--body h2.body-header.header--media {
             margin-bottom: 0.25em;
             background-position: 0 -247px;
+        }
+        #layout--body h2.body-header.header--join {
+            margin-bottom: 0.25em;
+            background-position: 0 -280px;
         }
 
     #layout--body h2.drinks-header {
@@ -308,6 +312,12 @@ body {
             #layout--body .media-list li a {
                 font-weight: bold;
             }
+        #section--contact #section--contact-sub-join p.plaintext {
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+
 
 #section--partner-partner {
     margin-top: 50px;
