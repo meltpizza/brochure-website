@@ -146,7 +146,7 @@ body {
 
         background-image: url(/bundles/website/images/body_headers.png);
         background-repeat: no-repeat;
-        background-size: 180px 326px;
+        background-size: 180px 360px;
         background-position: 0 3px;
     }
         #layout--body h2.body-header.header--about {
@@ -185,6 +185,16 @@ body {
         #layout--body h2.body-header.header--join {
             margin-bottom: 0.25em;
             background-position: 0 -280px;
+        }
+        #layout--body h2.body-header.header--groups {
+            margin-bottom: 0.25em;
+            background-position: 0 -320px;
+        }
+    #menu-groups-container {
+        margin-bottom: 5em;
+    }
+        #menu-groups-container a {
+            font-weight: bold;
         }
 
     #layout--body h2.drinks-header {
@@ -259,7 +269,7 @@ body {
         }
 
     #layout--body #section--menu #menu--bottom-divider {
-        margin-bottom: 8em;
+        margin-bottom: 1.5em;
     }
 
     #layout--body #section--contact {
