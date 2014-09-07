@@ -53,7 +53,7 @@ class PartnerController extends Controller
             $em->persist($entry);
             $em->flush();
 
-            $this->get('session')->getFlashBag()->add('success', 'Your entry have been saved');
+            $this->get('session')->getFlashBag()->add('success', 'Thanks for registering! You have been sent a confirmation email, please print this or show it on your smartphone at MELT for your orders to count. See you soon!');
             return $this->redirect($this->generateUrl('partner_page', array('partner_code'=>$code)));
 
         } else {

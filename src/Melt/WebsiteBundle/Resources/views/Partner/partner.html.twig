@@ -1,6 +1,7 @@
 {% extends 'WebsiteBundle:Layout:base.html.twig' %}
 
 {% block body %}
+
 <!-- PARTNER SECTION -->
 <section class="" id="section--partner-partner">
     <div class="constrained soft--top">
@@ -10,6 +11,25 @@
             </div>
             <div class="col-md-12 text-center">
                 <h2>RAISE DOUGH FOR {{ partner.name }}</h2>
+
+                {% if app.session.flashbag.get('notice') is iterable or
+                    app.session.flashbag.get('success') is iterable
+                 %}
+                    <div class="flashMessages">
+                        {% for flashMessage in app.session.flashbag.get('notice') %}
+                            <div class="flash-notice alert alert-warning" role="alert">
+                                {{ flashMessage }}
+                            </div>
+                        {% endfor %}
+
+                        {% for flashMessage in app.session.flashbag.get('success') %}
+                            <div class="flash-success alert alert-success" role="alert">
+                                {{ flashMessage }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
 
                 {{ form_start(form) }}
                     {{ form_errors(form) }}
