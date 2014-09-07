@@ -53,6 +53,27 @@ class PartnerController extends Controller
             $em->persist($entry);
             $em->flush();
 
+            $email_txt = $this->render(
+                'WebsiteBundle:Layout:email.txt.twig',
+                array(
+                    'partner'   => $partner,
+                    'entry'     => $entry,
+                    'event_url' => 'http://melt.com.au/partners/' . $partner->getLink(),
+                )
+            );
+
+            $email_subject = 'Melt & ' . $partner->getName();
+
+            $message = \Swift_Message::newInstance()
+                ->setSubject($email_subject)
+                ->setFrom(array( 'noreply@melt.com.au' => 'Melt Pizza'))
+                ->setTo(array($entry->getEmail() => $entry->getName()))
+                ->setBody($email_txt)
+                //->addPart($body_html, 'text/html')
+            ;
+            $this->get('mailer')->send($message);
+
+
             $this->get('session')->getFlashBag()->add('success', 'Thanks for registering! You have been sent a confirmation email, please print this or show it on your smartphone at MELT for your orders to count. See you soon!');
             return $this->redirect($this->generateUrl('partner_page', array('partner_code'=>$code)));
 
