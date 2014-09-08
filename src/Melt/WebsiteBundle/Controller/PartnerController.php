@@ -53,12 +53,12 @@ class PartnerController extends Controller
             $em->persist($entry);
             $em->flush();
 
-            $email_txt = $this->render(
+            $email_txt = $this->get('templating')->render(
                 'WebsiteBundle:Layout:email.txt.twig',
                 array(
                     'partner'   => $partner,
                     'entry'     => $entry,
-                    'event_url' => 'http://melt.com.au/partners/' . $partner->getLink(),
+                    'event_url' => 'http://melt.com.au/partners/' . $partner->getCode(),
                 )
             );
 
