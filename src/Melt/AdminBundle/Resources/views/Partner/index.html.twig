@@ -18,7 +18,7 @@
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>URL Name</th>
+                    <th>RaiseDough Page</th>
                     <th>Event Date</th>
                     <th>Action</th>
                 </tr>
@@ -27,8 +27,8 @@
             <tbody>
                 {% for p in partners %}
                 <tr>
-                    <td>{{ p.name|truncate(45, '...') }} (<a href="{{ p.link }}" target="_blank">Link</a>)</td>
-                    <td>/{{ p.code }}</td>
+                    <td>{{ p.name|truncate(45, '...') }}</td>
+                    <td><a target="_blank" href="{{ path('raisedough_page', {'partner_code':p.code}) }}">/{{ p.code }}</a></td>
                     <td>{{ p.eventDate | date('jS M Y') }}</td>
                     <td>
                         <a href="{{ path('admin_partner_edit', {'id':p.id}) }}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
