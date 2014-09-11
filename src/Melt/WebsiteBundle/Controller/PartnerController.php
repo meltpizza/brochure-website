@@ -14,12 +14,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 
 /**
- * @Route("/partners")
+ * @Route("/raisedough")
  */
 class PartnerController extends Controller
 {
     /**
-     * @Route("/submit", name="partner_submit")
+     * @Route("/submit", name="raisedough_submit")
      * @Template()
      */
     public function partnerSubmitAction(Request $request)
@@ -38,7 +38,7 @@ class PartnerController extends Controller
 
         $entry = new PartnerEntry();
         $form  = $this->createFormBuilder($entry)
-                      ->setAction($this->generateUrl('partner_submit', array('code' => $code)))
+                      ->setAction($this->generateUrl('raisedough_submit', array('code' => $code)))
                       ->add('name'  , 'text')
                       ->add('email' , 'text')
                       ->add('submit', 'submit')
@@ -58,7 +58,7 @@ class PartnerController extends Controller
                 array(
                     'partner'   => $partner,
                     'entry'     => $entry,
-                    'event_url' => 'http://melt.com.au/partners/' . $partner->getCode(),
+                    'event_url' => $this->generateUrl('raisedough_page', array('partner_code' => $partner->getCode()), true),
                 )
             );
 
@@ -75,7 +75,7 @@ class PartnerController extends Controller
 
 
             $this->get('session')->getFlashBag()->add('success', 'Thanks for registering! You have been sent a confirmation email, please print this or show it on your smartphone at MELT for your orders to count. See you soon!');
-            return $this->redirect($this->generateUrl('partner_page', array('partner_code'=>$code)));
+            return $this->redirect($this->generateUrl('raisedough_page', array('partner_code'=>$code)));
 
         } else {
             $session->getFlashBag()->add('notice', "Sorry but your entry cannot be saved.");
@@ -85,7 +85,7 @@ class PartnerController extends Controller
 
 
     /**
-     * @Route("/{partner_code}", name="partner_page")
+     * @Route("/{partner_code}", name="raisedough_page")
      * @Template()
      */
     public function partnerAction($partner_code)
@@ -102,7 +102,7 @@ class PartnerController extends Controller
         }
 
         $form = $this->createFormBuilder($entry)
-                     ->setAction($this->generateUrl('partner_submit', array('code' => $partner_code)))
+                     ->setAction($this->generateUrl('raisedough_submit', array('code' => $partner_code)))
                      ->add('name'  , 'text')
                      ->add('email' , 'text')
                      ->add('submit', 'submit')
@@ -115,7 +115,7 @@ class PartnerController extends Controller
     }
 
     /**
-     * @Route("/", name="partner_index")
+     * @Route("/", name="raisedough_index")
      * @Cache(expires="+2 days", public="true")
      * @Template()
      */
