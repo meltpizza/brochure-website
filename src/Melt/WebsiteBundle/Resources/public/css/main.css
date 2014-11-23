@@ -30,6 +30,10 @@ body {
     color: rgb(239,87,39);
 }
 
+.listless li {
+    list-style: none;
+}
+
 .btn-primary {
     background-color: rgb(239,87,39);
     border-color: rgb(239,87,39);
@@ -371,8 +375,9 @@ body {
         background-color: #d83d0d;
     }
 
+#order-online-modal .modal-title,
 #booking-modal .modal-title {
-    font-weight: bold;
+    font-weight: bolder;
     text-transform: uppercase;
 }
 

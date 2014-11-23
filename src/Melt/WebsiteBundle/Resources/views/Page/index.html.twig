@@ -48,7 +48,8 @@
         </div>
 
         <div class="col-md-4 col-sm-12 body-nav--item">
-            <a href="http://www.menulog.com.au/order/melt-pizza" target="_blank"><img src="{{ asset('/bundles/website/images/body_nav__order.png') }}" width="125px" height="42px" /></a>
+            <a href="#" data-toggle="modal" data-target="#order-online-modal"><img src="{{ asset('/bundles/website/images/body_nav__order.png') }}" width="125px" height="42px" /></a>
+            {# <a href="http://www.menulog.com.au/order/melt-pizza" target="_blank"><img src="{{ asset('/bundles/website/images/body_nav__order.png') }}" width="125px" height="42px" /></a> #}
         </div>
     </div>
 
@@ -609,6 +610,7 @@
 </div><!-- #section-contact -->
 
 {% include 'WebsiteBundle:Layout:booking_modal.html.twig' %}
+{% include 'WebsiteBundle:Layout:order_online_modal.html.twig' %}
 
 {% endblock body %}
 
