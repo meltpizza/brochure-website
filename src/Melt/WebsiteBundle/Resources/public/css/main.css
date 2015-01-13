@@ -150,7 +150,7 @@ body {
 
         background-image: url(/bundles/website/images/body_headers.png);
         background-repeat: no-repeat;
-        background-size: 180px 360px;
+        background-size: 225px 394px;
         background-position: 0 3px;
     }
         #layout--body h2.body-header.header--about {
@@ -194,6 +194,13 @@ body {
             margin-bottom: 0.25em;
             background-position: 0 -320px;
         }
+        #layout--body h2.body-header.header--lunch {
+            width: 226px;
+            height: 40px;
+            margin-bottom: 0.25em;
+            background-position: 0 -353px;
+        }
+
     #menu-groups-container {
         margin-bottom: 5em;
     }
