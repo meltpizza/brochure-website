@@ -192,7 +192,7 @@ body {
         }
         #layout--body h2.body-header.header--groups {
             margin-bottom: 0.25em;
-            background-position: 0 -320px;
+            background-position: 0 -318px;
         }
         #layout--body h2.body-header.header--lunch {
             width: 226px;
@@ -272,6 +272,21 @@ body {
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        #layout--body #section--menu h4.menu-item--big-title {
+            margin-bottom: 0.25em;
+            font-size: 24px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        #layout--body #section--menu h4.menu-item--small-title {
+            margin-bottom: 0.25em;
+            font-size: 18px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         #layout--body #section--menu #menu-type--or {
             margin-top: 8em;
             margin-bottom: 8em;
