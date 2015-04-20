@@ -1,0 +1,33 @@
+{% extends 'WebsiteBundle:Layout:base.html.twig' %}
+
+{% block body %}
+<!-- LANDING SECTION -->
+<div class="constrained" id="section--top">
+
+    <!-- MAIN NAV -->
+    <div class="row" id="body-nav--container">
+
+        <div class="col-md-4 col-sm-12 text-right body-nav--item">
+        </div>
+
+        <div class="col-md-4 col-sm-12 hidden-sm hidden-xs">
+            <a href="http://melt.com.au/"><img src="{{ asset('/bundles/website/images/body_logo.png') }}" width="330px" height="312px" /></a>
+        </div>
+
+        <div class="col-md-4 col-sm-12 body-nav--item">
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 push--bottom" id="privacy--box">
+            <br />
+            <h1 class="text-center">In Transition</h1>
+
+            <p class="text-center">We are currently closed and transitioning to new shop owners.<br />
+            Thank you for your understanding. </p>
+
+            <p class="text-center"><strong>MELT Pizza</strong></p>
+        </div>
+
+    </div><!-- row -->
+</div><!-- constrained -->
+
+{% endblock body %}

@@ -11,12 +11,26 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class PageController extends Controller
 {
     /**
-     * @Route("/", name="page_home")
+     * @Route("/", name="page_transit")
+     * @Cache(expires="+2 days", public="true")
+     * @Template()
+     */
+    public function transitionAction()
+    {
+        return array();
+    }
+
+    /**
+     * @Route("/old", name="page_home")
      * @Cache(expires="+2 days", public="true")
      * @Template()
      */
     public function indexAction()
     {
+
+        return $this->redirect('/');
+        exit;
+
         $media = $this->getDoctrine()->getRepository('WebsiteBundle:Media')->findBy(array('active'=>1), array('ordering' => 'ASC'));
 
         return array(
@@ -33,4 +47,5 @@ class PageController extends Controller
     {
         return array();
     }
+
 }
